@@ -14,4 +14,8 @@ export class DataService {
   getUsers(): Observable<IUser[]>{
     return this.http.get<IUser[]>('https://jsonplaceholder.typicode.com/users')
   }
+
+  getCustomers() {
+    return this.http.get('http://localhost:7089/api/Customers')
+  }
 }

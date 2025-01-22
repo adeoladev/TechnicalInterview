@@ -15,7 +15,14 @@ export class UsersComponent implements OnInit {
   dataService = inject(DataService)
   userList$: Observable<IUser[]> = new Observable<IUser[]>;
 
+  customers: any
+
   ngOnInit(): void {
     this.userList$ = this.dataService.getUsers();
+
+    this.dataService.getCustomers().subscribe((res)=>{
+      this.customers = res;
+      console.log(res)
+    })
   }
 }
