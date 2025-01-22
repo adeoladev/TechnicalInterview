@@ -16,6 +16,6 @@ export class DataService {
   }
 
   getCustomers() {
-    return this.http.get('http://localhost:7089/api/Customers')
+    return this.http.get('https://localhost:7115/Customer') 
   }
 }
