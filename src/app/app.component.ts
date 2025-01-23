@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { UsersComponent } from "./components/users/users.component";
+import { CustomersComponent } from './components/customers/customers.component';
 
 @Component({
   selector: 'app-root',
-  imports: [UsersComponent],
+  imports: [CustomersComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { IUser } from '../interfaces/users';
+import { ICustomer } from '../interfaces/customer';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -9,13 +9,8 @@ import { Observable } from 'rxjs';
 export class DataService {
 
   http = inject(HttpClient)
-  constructor() { }
 
-  getUsers(): Observable<IUser[]>{
-    return this.http.get<IUser[]>('https://jsonplaceholder.typicode.com/users')
-  }
-
-  getCustomers() {
-    return this.http.get('https://localhost:7115/Customer') 
+  getCustomers(): Observable<ICustomer[]> {
+    return this.http.get<ICustomer[]>('http://localhost:5040/Customer') 
   }
 }
