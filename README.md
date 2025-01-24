@@ -20,4 +20,4 @@ npm start
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
 # Note
-Ensure the backend project([https://github.com/Devgoda/Northwind]) is running to fetch and display data in the table.
+Ensure the backend project([https://github.com/Devgoda/Northwind]) is running to fetch and display the data.
