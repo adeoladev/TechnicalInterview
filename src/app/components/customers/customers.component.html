@@ -1,6 +1,6 @@
 <div class="container text-center">
-  <h2 class="pb-5">Customers Table</h2>
-  <table
+  <h2 class="pb-5">employees Table</h2>
+  <!----<table
     class="table table-responsive table-striped table-bordered table-hover"
   >
     <thead class="table-dark">
@@ -16,18 +16,41 @@
       </tr>
     </thead>
     <tbody class="table-group-divider">
-      @for (customer of customerList$ | async; track $index) {
+      @for (employee of employeeList$ | async; track $index) {
       <tr>
-        <th scope="row">{{ customer.customerID }}</th>
-        <td>{{ customer.contactTitle }}</td>
-        <td>{{ customer.contactName }}</td>
-        <td>{{ customer.country }}</td>
-        <td>{{ customer.address }}</td>
-        <td>{{ customer.postalCode }}</td>
-        <td>{{ customer.phone }}</td>
-        <td>{{ customer.fax }}</td>
+        <th scope="row">{{ employee.employeeID }}</th>
+        <td>{{ employee.contactTitle }}</td>
+        <td>{{ employee.contactName }}</td>
+        <td>{{ employee.country }}</td>
+        <td>{{ employee.address }}</td>
+        <td>{{ employee.postalCode }}</td>
+        <td>{{ employee.phone }}</td>
+        <td>{{ employee.fax }}</td>
       </tr>
       }
     </tbody>
-  </table>
+  </table>-->
 </div>
+
+<h2>Employees</h2>
+
+
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div *ngFor='let employee of employees' class="col">
+      <div class="card h-100">
+        <div class="text-center">
+          <img style="width:300px;margin:40px;"src="https://ia801307.us.archive.org/1/items/instagram-plain-round/instagram%20dip%20in%20hair.jpg" class="rounded">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-center">{{employee.FirstName}} {{employee.LastName}}</h5>
+          <p class="card-text text-center">{{employee.Notes}}</p>
+        </div>
+        <div class="card-footer text-center">
+          <small class="text-muted">{{employee.Title}}</small>
+        </div>
+      </div>
+      </div>
+    </div>
+    
+
